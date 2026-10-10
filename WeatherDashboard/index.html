@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Search for current weather conditions by city.">
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="weather-app">
+        <header class="app-header">
+            <p class="eyebrow">LIVE WEATHER</p>
+            <h1>Weather Dashboard</h1>
+            <p>Discover the weather in your city.</p>
+        </header>
+
+        <section aria-labelledby="search-heading">
+            <h2 id="search-heading">Search City</h2>
+
+            <form id="weather-form">
+                <label for="city-input">Enter city name</label>
+
+                <div class="search-row">
+                    <input
+                        type="text"
+                        id="city-input"
+                        name="city"
+                        placeholder="e.g. Pune, Mumbai, London"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="search-button">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <p id="status" role="status" aria-live="polite">
+            Enter a city name to check the weather.
+        </p>
+
+        <section id="weather-result"
+                 class="weather-result"
+                 aria-labelledby="city-name"
+                 hidden>
+
+            <div class="weather-main">
+                <div>
+                    <p id="country-name" class="country"></p>
+                    <h2 id="city-name">City</h2>
+                    <p id="weather-description"></p>
+                </div>
+
+                <img id="weather-icon"
+                     alt=""
+                     width="100"
+                     height="100"
+                     hidden>
+            </div>
+
+            <p class="temperature">
+                <span id="temperature">--</span><span>°C</span>
+            </p>
+
+            <div class="weather-grid">
+                <article class="weather-card">
+                    <span aria-hidden="true">💧</span>
+                    <h3>Humidity</h3>
+                    <p><span id="humidity">--</span>%</p>
+                </article>
+
+                <article class="weather-card">
+                    <span aria-hidden="true">💨</span>
+                    <h3>Wind Speed</h3>
+                    <p><span id="wind-speed">--</span> m/s</p>
+                </article>
+
+                <article class="weather-card">
+                    <span aria-hidden="true">🌡️</span>
+                    <h3>Feels Like</h3>
+                    <p><span id="feels-like">--</span>°C</p>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <p>Weather information powered by OpenWeather.</p>
+        </footer>
+    </main>
+</body>
+</html>
