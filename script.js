@@ -1,14 +1,39 @@
 
 "use strict";
 
-// Display the current year in the footer
+// Update footer year
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
 
-// Handle the contact form
+// Light and dark theme toggle
+const themeButton = document.getElementById("theme-toggle");
+
+if (themeButton) {
+    themeButton.addEventListener("click", function () {
+        const isDark = document.body.classList.toggle("dark-theme");
+
+        themeButton.setAttribute("aria-pressed", String(isDark));
+
+        if (isDark) {
+            themeButton.textContent = "☀️ Light Mode";
+            themeButton.setAttribute(
+                "aria-label",
+                "Switch to light mode"
+            );
+        } else {
+            themeButton.textContent = "🌙 Dark Mode";
+            themeButton.setAttribute(
+                "aria-label",
+                "Switch to dark mode"
+            );
+        }
+    });
+}
+
+// Contact form validation
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 
@@ -25,8 +50,8 @@ if (contactForm && formStatus) {
 
         formStatus.textContent =
             "Thank you, " + name +
-            "! The form has been validated successfully. " +
-            "This demo does not send or save messages.";
+            "! Your form has been validated successfully. " +
+            "This demo does not send or store messages.";
 
         contactForm.reset();
     });

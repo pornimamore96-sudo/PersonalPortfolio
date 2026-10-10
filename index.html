@@ -4,25 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Welcome to my personal portfolio. Explore my education, skills, projects and contact information.">
-    <meta name="keywords" content="personal portfolio, HTML5, web development, student projects">
+    <meta name="description" content="Explore my responsive personal portfolio, skills, education and web development projects.">
     <meta name="author" content="Your Name">
-    <meta name="robots" content="index, follow">
-
-    <title>My Personal Portfolio | Home</title>
-
+    <meta name="theme-color" content="#f5f7ff">
+    <title>My Portfolio | Responsive Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="site-header">
-        <div class="container header-content">
-            <a class="logo" href="#home" aria-label="My Portfolio home">
-                MyPortfolio
+    <header class="header">
+        <div class="container navbar">
+            <a class="logo" href="#home" aria-label="Portfolio home">
+                My<span>Portfolio</span>
             </a>
 
             <nav aria-label="Main navigation">
@@ -34,33 +29,44 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
+            <button id="theme-toggle" class="theme-button"
+                    type="button" aria-pressed="false"
+                    aria-label="Switch to dark mode">
+                🌙 Dark Mode
+            </button>
         </div>
     </header>
 
-    <main id="main-content">
+    <main id="main">
         <section id="home" class="hero section" aria-labelledby="home-title">
-            <div class="container hero-content">
-                <div class="hero-text">
+            <div class="container hero-grid">
+                <div class="hero-content">
                     <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
-                    <h1 id="home-title">Hello, I'm <span>Your Name</span></h1>
-                    <p class="hero-description">
-                        I am a BCA student interested in web development,
-                        programming and learning new technologies.
+                    <h1 id="home-title">
+                        Hello, I'm <span>Your Name</span>
+                    </h1>
+                    <h2 class="subtitle">BCA Student & Web Development Learner</h2>
+                    <p>
+                        I enjoy learning new technologies and creating
+                        attractive, responsive and accessible websites.
+                        Explore my skills and projects below.
                     </p>
-
-                    <a class="button" href="#projects">Explore My Projects</a>
-                    <a class="button button-outline" href="#contact">Contact Me</a>
+                    <div class="hero-actions">
+                        <a class="button" href="#projects">View Projects</a>
+                        <a class="button button-outline" href="#contact">
+                            Contact Me
+                        </a>
+                    </div>
                 </div>
 
-                <div class="profile-card">
-                    <div class="profile-avatar" role="img"
-                         aria-label="Decorative profile avatar with letter Y">
-                        Y
-                    </div>
+                <aside class="profile-card" aria-label="Profile introduction">
+                    <div class="avatar" role="img"
+                         aria-label="Decorative avatar with letter Y">Y</div>
                     <h2>Your Name</h2>
                     <p>BCA Student</p>
-                    <p>Future Web Development Professional</p>
-                </div>
+                    <p>Learning • Creating • Improving</p>
+                </aside>
             </div>
         </section>
 
@@ -68,37 +74,58 @@
             <div class="container">
                 <p class="eyebrow">GET TO KNOW ME</p>
                 <h2 id="about-title">About Me</h2>
-
                 <div class="content-card">
                     <p>
-                        I am a student of computer applications who enjoys
-                        learning programming and developing useful websites.
-                        I am interested in HTML5, CSS, JavaScript, Python
-                        and database management.
+                        I am a student of computer applications interested
+                        in web development, programming and database systems.
+                        I enjoy practicing new concepts and building useful
+                        projects as part of my learning journey.
                     </p>
                     <p>
-                        My goal is to improve my technical skills and create
-                        websites that are accessible, responsive and easy
-                        to use for everyone.
+                        My goal is to create websites that work smoothly
+                        across mobile phones, tablets and desktop computers.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="section section-light"
+        <section id="skills" class="section section-alt"
                  aria-labelledby="skills-title">
             <div class="container">
                 <p class="eyebrow">WHAT I AM LEARNING</p>
                 <h2 id="skills-title">My Skills</h2>
 
-                <ul class="skills-list" aria-label="Technical skills">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>SQL</li>
-                    <li>Responsive Web Design</li>
-                    <li>Web Accessibility</li>
+                <ul class="skills-grid">
+                    <li class="skill-card">
+                        <span aria-hidden="true">🌐</span>
+                        <h3>HTML5</h3>
+                        <p>Semantic website structure</p>
+                    </li>
+                    <li class="skill-card">
+                        <span aria-hidden="true">🎨</span>
+                        <h3>CSS3</h3>
+                        <p>Responsive layouts and styling</p>
+                    </li>
+                    <li class="skill-card">
+                        <span aria-hidden="true">⚡</span>
+                        <h3>JavaScript</h3>
+                        <p>Interactive web features</p>
+                    </li>
+                    <li class="skill-card">
+                        <span aria-hidden="true">🐍</span>
+                        <h3>Python</h3>
+                        <p>Programming fundamentals</p>
+                    </li>
+                    <li class="skill-card">
+                        <span aria-hidden="true">🗄️</span>
+                        <h3>SQL</h3>
+                        <p>Database basics</p>
+                    </li>
+                    <li class="skill-card">
+                        <span aria-hidden="true">📱</span>
+                        <h3>Responsive Design</h3>
+                        <p>Mobile-first layouts</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -107,50 +134,52 @@
                  aria-labelledby="projects-title">
             <div class="container">
                 <p class="eyebrow">MY WORK</p>
-                <h2 id="projects-title">My Projects</h2>
+                <h2 id="projects-title">Featured Projects</h2>
 
-                <div class="project-grid">
+                <div class="projects-grid">
                     <article class="project-card">
+                        <div class="project-icon" aria-hidden="true">📚</div>
                         <h3>Library Management System</h3>
                         <p>
-                            A student project designed to organize library
-                            book details and help manage book issue and
-                            return information.
+                            A student project concept for organizing library
+                            books and managing book issue and return details.
                         </p>
                         <a href="#contact"
-                           aria-label="Contact me about the Library Management System">
-                            Learn more
+                           aria-label="Ask about the Library Management System project">
+                            Learn more →
                         </a>
                     </article>
 
                     <article class="project-card">
-                        <h3>Personal Portfolio Website</h3>
+                        <div class="project-icon" aria-hidden="true">💻</div>
+                        <h3>Personal Portfolio</h3>
                         <p>
-                            A responsive portfolio website built using
-                            semantic HTML5, CSS and JavaScript.
+                            A portfolio website that presents my skills,
+                            interests and projects using HTML and CSS.
                         </p>
                         <a href="#contact"
-                           aria-label="Contact me about the Personal Portfolio Website">
-                            Learn more
+                           aria-label="Ask about the Personal Portfolio project">
+                            Learn more →
                         </a>
                     </article>
 
                     <article class="project-card">
+                        <div class="project-icon" aria-hidden="true">🧩</div>
                         <h3>Programming Practice</h3>
                         <p>
-                            Small programming exercises created while
-                            learning computer science and database concepts.
+                            Small programming exercises completed while
+                            learning Python, Java and database concepts.
                         </p>
                         <a href="#contact"
-                           aria-label="Contact me about programming practice projects">
-                            Learn more
+                           aria-label="Ask about programming practice projects">
+                            Learn more →
                         </a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section section-light"
+        <section id="contact" class="section section-alt"
                  aria-labelledby="contact-title">
             <div class="container">
                 <p class="eyebrow">LET'S CONNECT</p>
@@ -158,28 +187,21 @@
 
                 <div class="content-card">
                     <p>
-                        Complete this form to prepare a message.
-                        This demonstration form does not send email
-                        or store personal information.
+                        Fill in the form below to test the contact form.
+                        This demonstration does not send emails or store data.
                     </p>
 
                     <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name"
+                            <input id="name" name="name" type="text"
                                    autocomplete="name" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email"
+                            <input id="email" name="email" type="email"
                                    autocomplete="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject"
-                                   required>
                         </div>
 
                         <div class="form-group">
@@ -189,25 +211,22 @@
                         </div>
 
                         <button class="button" type="submit">
-                            Prepare Message
+                            Submit Message
                         </button>
 
-                        <p id="form-status" class="form-status"
-                           role="status" aria-live="polite"></p>
+                        <p id="form-status" role="status"
+                           aria-live="polite"></p>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="footer">
         <div class="container">
-            <p>
-                &copy; <span id="year">2026</span>
-                Your Name. All rights reserved.
-            </p>
-            <p>Designed with semantic HTML5 and accessibility in mind.</p>
-            <a href="#home">Back to top</a>
+            <p>&copy; <span id="year">2026</span> Your Name. All rights reserved.</p>
+            <p>Built with CSS Grid, Flexbox and responsive CSS.</p>
+            <a href="#home">Back to top ↑</a>
         </div>
     </footer>
 </body>
