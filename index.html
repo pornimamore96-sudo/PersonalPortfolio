@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Welcome to my personal portfolio. Explore my education, skills, projects and contact information.">
+    <meta name="keywords" content="personal portfolio, HTML5, web development, student projects">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+
+    <title>My Personal Portfolio | Home</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="#home" aria-label="My Portfolio home">
+                MyPortfolio
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="hero section" aria-labelledby="home-title">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+                    <h1 id="home-title">Hello, I'm <span>Your Name</span></h1>
+                    <p class="hero-description">
+                        I am a BCA student interested in web development,
+                        programming and learning new technologies.
+                    </p>
+
+                    <a class="button" href="#projects">Explore My Projects</a>
+                    <a class="button button-outline" href="#contact">Contact Me</a>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-avatar" role="img"
+                         aria-label="Decorative profile avatar with letter Y">
+                        Y
+                    </div>
+                    <h2>Your Name</h2>
+                    <p>BCA Student</p>
+                    <p>Future Web Development Professional</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="container">
+                <p class="eyebrow">GET TO KNOW ME</p>
+                <h2 id="about-title">About Me</h2>
+
+                <div class="content-card">
+                    <p>
+                        I am a student of computer applications who enjoys
+                        learning programming and developing useful websites.
+                        I am interested in HTML5, CSS, JavaScript, Python
+                        and database management.
+                    </p>
+                    <p>
+                        My goal is to improve my technical skills and create
+                        websites that are accessible, responsive and easy
+                        to use for everyone.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-light"
+                 aria-labelledby="skills-title">
+            <div class="container">
+                <p class="eyebrow">WHAT I AM LEARNING</p>
+                <h2 id="skills-title">My Skills</h2>
+
+                <ul class="skills-list" aria-label="Technical skills">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Responsive Web Design</li>
+                    <li>Web Accessibility</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="section"
+                 aria-labelledby="projects-title">
+            <div class="container">
+                <p class="eyebrow">MY WORK</p>
+                <h2 id="projects-title">My Projects</h2>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3>Library Management System</h3>
+                        <p>
+                            A student project designed to organize library
+                            book details and help manage book issue and
+                            return information.
+                        </p>
+                        <a href="#contact"
+                           aria-label="Contact me about the Library Management System">
+                            Learn more
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>
+                            A responsive portfolio website built using
+                            semantic HTML5, CSS and JavaScript.
+                        </p>
+                        <a href="#contact"
+                           aria-label="Contact me about the Personal Portfolio Website">
+                            Learn more
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Programming Practice</h3>
+                        <p>
+                            Small programming exercises created while
+                            learning computer science and database concepts.
+                        </p>
+                        <a href="#contact"
+                           aria-label="Contact me about programming practice projects">
+                            Learn more
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-light"
+                 aria-labelledby="contact-title">
+            <div class="container">
+                <p class="eyebrow">LET'S CONNECT</p>
+                <h2 id="contact-title">Contact Me</h2>
+
+                <div class="content-card">
+                    <p>
+                        Complete this form to prepare a message.
+                        This demonstration form does not send email
+                        or store personal information.
+                    </p>
+
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name"
+                                   autocomplete="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email"
+                                   autocomplete="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message"
+                                      rows="5" required></textarea>
+                        </div>
+
+                        <button class="button" type="submit">
+                            Prepare Message
+                        </button>
+
+                        <p id="form-status" class="form-status"
+                           role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; <span id="year">2026</span>
+                Your Name. All rights reserved.
+            </p>
+            <p>Designed with semantic HTML5 and accessibility in mind.</p>
+            <a href="#home">Back to top</a>
+        </div>
+    </footer>
+</body>
+</html>
